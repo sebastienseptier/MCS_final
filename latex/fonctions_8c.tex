@@ -1,0 +1,122 @@
+\hypertarget{fonctions_8c}{}\section{fonctions.\+c File Reference}
+\label{fonctions_8c}\index{fonctions.\+c@{fonctions.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fonctions_8c_af67d760bfeb2f36865ede243762dcac7}{frame} (S\+D\+L\+\_\+\+Surface $\ast$screen, S\+D\+L\+\_\+\+Surface $\ast$fond, S\+D\+L\+\_\+\+Surface $\ast$sol, S\+D\+L\+\_\+\+Surface $\ast$plateforme, S\+D\+L\+\_\+\+Surface $\ast$mario, S\+D\+L\+\_\+\+Surface $\ast$luigi, S\+D\+L\+\_\+\+Rect pos\+Fond, S\+D\+L\+\_\+\+Rect pos\+Sol, S\+D\+L\+\_\+\+Rect pos\+Plateforme, S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_af565adbea3288edf19ecb8438be8777d}{pos\+Mario}, S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}{pos\+Luigi}, S\+D\+L\+\_\+\+Surface $\ast$mario\+Fireball, S\+D\+L\+\_\+\+Surface $\ast$luigi\+Fireball, S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a341583ea9e65fbd19fddaed3645ab70b}{pos\+Mario\+Fireball}, S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a88b79b425d22b397d42fb25485c76c58}{pos\+Luigi\+Fireball})
+\item 
+int \hyperlink{fonctions_8c_aa429447cf2b3da85f4e90d27f666a44f}{init\+Client} (char ip\+Address\mbox{[}$\,$\mbox{]}, int port, int $\ast$sock)
+\item 
+int \hyperlink{fonctions_8c_a90b51ab1ce4995bd2e484329a0aa565e}{send\+Message} (int sock, char message\mbox{[}$\,$\mbox{]})
+\item 
+void $\ast$ \hyperlink{fonctions_8c_af960448502472b0f07a4f7086a8370c8}{recevoir} (void $\ast$arg)
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{fonctions_8c_a13e6a901682ec8ac38e95d4a81db2ceb}{unserialize} (char $\ast$str)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{fonctions_8c_af565adbea3288edf19ecb8438be8777d}{pos\+Mario}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{fonctions_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}{pos\+Luigi}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{fonctions_8c_a341583ea9e65fbd19fddaed3645ab70b}{pos\+Mario\+Fireball}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{fonctions_8c_a88b79b425d22b397d42fb25485c76c58}{pos\+Luigi\+Fireball}
+\item 
+int \hyperlink{fonctions_8c_a27af5dd05a36f754b14f2bde6a814ded}{id\+Perso}
+\item 
+int \hyperlink{fonctions_8c_a379cab3c55a4171cc17daf7936a84f0b}{orientation\+\_\+mario}
+\item 
+int \hyperlink{fonctions_8c_a20f9225591d20b1fdd2b4915ccfca102}{orientation\+\_\+luigi}
+\item 
+int \hyperlink{fonctions_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}{tir\+Mario}
+\item 
+int \hyperlink{fonctions_8c_a9c18f160f6dd693a3084ea0dd42cc836}{tir\+Luigi}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{fonctions_8c_af67d760bfeb2f36865ede243762dcac7}{}\index{fonctions.\+c@{fonctions.\+c}!frame@{frame}}
+\index{frame@{frame}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{frame(\+S\+D\+L\+\_\+\+Surface $\ast$screen, S\+D\+L\+\_\+\+Surface $\ast$fond, S\+D\+L\+\_\+\+Surface $\ast$sol, S\+D\+L\+\_\+\+Surface $\ast$plateforme, S\+D\+L\+\_\+\+Surface $\ast$mario, S\+D\+L\+\_\+\+Surface $\ast$luigi, S\+D\+L\+\_\+\+Rect pos\+Fond, S\+D\+L\+\_\+\+Rect pos\+Sol, S\+D\+L\+\_\+\+Rect pos\+Plateforme, S\+D\+L\+\_\+\+Rect pos\+Mario, S\+D\+L\+\_\+\+Rect pos\+Luigi, S\+D\+L\+\_\+\+Surface $\ast$mario\+Fireball, S\+D\+L\+\_\+\+Surface $\ast$luigi\+Fireball, S\+D\+L\+\_\+\+Rect pos\+Mario\+Fireball, S\+D\+L\+\_\+\+Rect pos\+Luigi\+Fireball)}]{\setlength{\rightskip}{0pt plus 5cm}int frame (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{fond, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{sol, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{plateforme, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mario, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{luigi, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Fond, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Sol, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Plateforme, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Mario, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Luigi, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mario\+Fireball, }
+\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{luigi\+Fireball, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Mario\+Fireball, }
+\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Luigi\+Fireball}
+\end{DoxyParamCaption}
+)}\label{fonctions_8c_af67d760bfeb2f36865ede243762dcac7}
+\hypertarget{fonctions_8c_aa429447cf2b3da85f4e90d27f666a44f}{}\index{fonctions.\+c@{fonctions.\+c}!init\+Client@{init\+Client}}
+\index{init\+Client@{init\+Client}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{init\+Client(char ip\+Address[], int port, int $\ast$sock)}]{\setlength{\rightskip}{0pt plus 5cm}int init\+Client (
+\begin{DoxyParamCaption}
+\item[{char}]{ip\+Address\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{port, }
+\item[{int $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\label{fonctions_8c_aa429447cf2b3da85f4e90d27f666a44f}
+\hypertarget{fonctions_8c_af960448502472b0f07a4f7086a8370c8}{}\index{fonctions.\+c@{fonctions.\+c}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{recevoir(void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ recevoir (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{fonctions_8c_af960448502472b0f07a4f7086a8370c8}
+\hypertarget{fonctions_8c_a90b51ab1ce4995bd2e484329a0aa565e}{}\index{fonctions.\+c@{fonctions.\+c}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{send\+Message(int sock, char message[])}]{\setlength{\rightskip}{0pt plus 5cm}int send\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{sock, }
+\item[{char}]{message\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{fonctions_8c_a90b51ab1ce4995bd2e484329a0aa565e}
+\hypertarget{fonctions_8c_a13e6a901682ec8ac38e95d4a81db2ceb}{}\index{fonctions.\+c@{fonctions.\+c}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{unserialize(char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect unserialize (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{fonctions_8c_a13e6a901682ec8ac38e95d4a81db2ceb}
+
+
+\subsection{Variable Documentation}
+\hypertarget{fonctions_8c_a27af5dd05a36f754b14f2bde6a814ded}{}\index{fonctions.\+c@{fonctions.\+c}!id\+Perso@{id\+Perso}}
+\index{id\+Perso@{id\+Perso}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{id\+Perso}]{\setlength{\rightskip}{0pt plus 5cm}int id\+Perso}\label{fonctions_8c_a27af5dd05a36f754b14f2bde6a814ded}
+\hypertarget{fonctions_8c_a20f9225591d20b1fdd2b4915ccfca102}{}\index{fonctions.\+c@{fonctions.\+c}!orientation\+\_\+luigi@{orientation\+\_\+luigi}}
+\index{orientation\+\_\+luigi@{orientation\+\_\+luigi}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{orientation\+\_\+luigi}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+luigi}\label{fonctions_8c_a20f9225591d20b1fdd2b4915ccfca102}
+\hypertarget{fonctions_8c_a379cab3c55a4171cc17daf7936a84f0b}{}\index{fonctions.\+c@{fonctions.\+c}!orientation\+\_\+mario@{orientation\+\_\+mario}}
+\index{orientation\+\_\+mario@{orientation\+\_\+mario}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{orientation\+\_\+mario}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+mario}\label{fonctions_8c_a379cab3c55a4171cc17daf7936a84f0b}
+\hypertarget{fonctions_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}{}\index{fonctions.\+c@{fonctions.\+c}!pos\+Luigi@{pos\+Luigi}}
+\index{pos\+Luigi@{pos\+Luigi}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{pos\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Luigi}\label{fonctions_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}
+\hypertarget{fonctions_8c_a88b79b425d22b397d42fb25485c76c58}{}\index{fonctions.\+c@{fonctions.\+c}!pos\+Luigi\+Fireball@{pos\+Luigi\+Fireball}}
+\index{pos\+Luigi\+Fireball@{pos\+Luigi\+Fireball}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{pos\+Luigi\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Luigi\+Fireball}\label{fonctions_8c_a88b79b425d22b397d42fb25485c76c58}
+\hypertarget{fonctions_8c_af565adbea3288edf19ecb8438be8777d}{}\index{fonctions.\+c@{fonctions.\+c}!pos\+Mario@{pos\+Mario}}
+\index{pos\+Mario@{pos\+Mario}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{pos\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Mario}\label{fonctions_8c_af565adbea3288edf19ecb8438be8777d}
+\hypertarget{fonctions_8c_a341583ea9e65fbd19fddaed3645ab70b}{}\index{fonctions.\+c@{fonctions.\+c}!pos\+Mario\+Fireball@{pos\+Mario\+Fireball}}
+\index{pos\+Mario\+Fireball@{pos\+Mario\+Fireball}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{pos\+Mario\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Mario\+Fireball}\label{fonctions_8c_a341583ea9e65fbd19fddaed3645ab70b}
+\hypertarget{fonctions_8c_a9c18f160f6dd693a3084ea0dd42cc836}{}\index{fonctions.\+c@{fonctions.\+c}!tir\+Luigi@{tir\+Luigi}}
+\index{tir\+Luigi@{tir\+Luigi}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{tir\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}int tir\+Luigi}\label{fonctions_8c_a9c18f160f6dd693a3084ea0dd42cc836}
+\hypertarget{fonctions_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}{}\index{fonctions.\+c@{fonctions.\+c}!tir\+Mario@{tir\+Mario}}
+\index{tir\+Mario@{tir\+Mario}!fonctions.\+c@{fonctions.\+c}}
+\subsubsection[{tir\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}int tir\+Mario}\label{fonctions_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}

@@ -1,0 +1,111 @@
+\hypertarget{server_8h}{}\section{server.\+h File Reference}
+\label{server_8h}\index{server.\+h@{server.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{server_8h_a24ce742f100f6686e21181eeef146c52}{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}~2
+\item 
+\#define \hyperlink{server_8h_a3d3bf5a2f88b1dba6c6bc13bf889c3cc}{L\+A\+R\+G\+E\+U\+R}~800
+\item 
+\#define \hyperlink{server_8h_ad629b1db4ee230dc5de47de843476e72}{H\+A\+U\+T\+E\+U\+R}~600
+\item 
+\#define \hyperlink{server_8h_a716e9a8d845090ba7031bffa50f9536a}{S\+O\+L}~480
+\item 
+\#define \hyperlink{server_8h_a17c3799a7d49eb9ecfa64b003c0f814b}{X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}~275
+\item 
+\#define \hyperlink{server_8h_aef490e3308e9471e24f7759a5b491fd2}{Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}~330
+\item 
+\#define \hyperlink{server_8h_a5c45fa69a64a97a0ab0987fdfd08ff02}{M\+A\+X\+T\+A\+B}~5
+\item 
+\#define \hyperlink{server_8h_a392fb874e547e582e9c66a08a1f23326}{M\+A\+X}~20
+\item 
+\#define \hyperlink{server_8h_a472373089a66053425ba5d58c1a84dbf}{V\+I\+D\+E}(ch)~(strlen(ch)==0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server_8h_a90b51ab1ce4995bd2e484329a0aa565e}{send\+Message} (int sock, char message\mbox{[}$\,$\mbox{]})
+\item 
+void $\ast$ \hyperlink{server_8h_af960448502472b0f07a4f7086a8370c8}{recevoir} (void $\ast$arg)
+\item 
+void \hyperlink{server_8h_ae9eeab47ed576f565aeb2b29d2ed2128}{serialize} (S\+D\+L\+\_\+\+Rect pos, char $\ast$str)
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server_8h_a8bac22586f6de4e8fab98d2537afa536}{unserialize} (const char str\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{server_8h_ad629b1db4ee230dc5de47de843476e72}{}\index{server.\+h@{server.\+h}!H\+A\+U\+T\+E\+U\+R@{H\+A\+U\+T\+E\+U\+R}}
+\index{H\+A\+U\+T\+E\+U\+R@{H\+A\+U\+T\+E\+U\+R}!server.\+h@{server.\+h}}
+\subsubsection[{H\+A\+U\+T\+E\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+A\+U\+T\+E\+U\+R~600}\label{server_8h_ad629b1db4ee230dc5de47de843476e72}
+\hypertarget{server_8h_a3d3bf5a2f88b1dba6c6bc13bf889c3cc}{}\index{server.\+h@{server.\+h}!L\+A\+R\+G\+E\+U\+R@{L\+A\+R\+G\+E\+U\+R}}
+\index{L\+A\+R\+G\+E\+U\+R@{L\+A\+R\+G\+E\+U\+R}!server.\+h@{server.\+h}}
+\subsubsection[{L\+A\+R\+G\+E\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+R\+G\+E\+U\+R~800}\label{server_8h_a3d3bf5a2f88b1dba6c6bc13bf889c3cc}
+\hypertarget{server_8h_a392fb874e547e582e9c66a08a1f23326}{}\index{server.\+h@{server.\+h}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!server.\+h@{server.\+h}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X~20}\label{server_8h_a392fb874e547e582e9c66a08a1f23326}
+\hypertarget{server_8h_a5c45fa69a64a97a0ab0987fdfd08ff02}{}\index{server.\+h@{server.\+h}!M\+A\+X\+T\+A\+B@{M\+A\+X\+T\+A\+B}}
+\index{M\+A\+X\+T\+A\+B@{M\+A\+X\+T\+A\+B}!server.\+h@{server.\+h}}
+\subsubsection[{M\+A\+X\+T\+A\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+T\+A\+B~5}\label{server_8h_a5c45fa69a64a97a0ab0987fdfd08ff02}
+\hypertarget{server_8h_a24ce742f100f6686e21181eeef146c52}{}\index{server.\+h@{server.\+h}!N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S@{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}}
+\index{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S@{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}!server.\+h@{server.\+h}}
+\subsubsection[{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S~2}\label{server_8h_a24ce742f100f6686e21181eeef146c52}
+\hypertarget{server_8h_a716e9a8d845090ba7031bffa50f9536a}{}\index{server.\+h@{server.\+h}!S\+O\+L@{S\+O\+L}}
+\index{S\+O\+L@{S\+O\+L}!server.\+h@{server.\+h}}
+\subsubsection[{S\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+L~480}\label{server_8h_a716e9a8d845090ba7031bffa50f9536a}
+\hypertarget{server_8h_a472373089a66053425ba5d58c1a84dbf}{}\index{server.\+h@{server.\+h}!V\+I\+D\+E@{V\+I\+D\+E}}
+\index{V\+I\+D\+E@{V\+I\+D\+E}!server.\+h@{server.\+h}}
+\subsubsection[{V\+I\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+I\+D\+E(
+\begin{DoxyParamCaption}
+\item[{}]{ch}
+\end{DoxyParamCaption}
+)~(strlen(ch)==0)}\label{server_8h_a472373089a66053425ba5d58c1a84dbf}
+\hypertarget{server_8h_a17c3799a7d49eb9ecfa64b003c0f814b}{}\index{server.\+h@{server.\+h}!X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E@{X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}}
+\index{X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E@{X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}!server.\+h@{server.\+h}}
+\subsubsection[{X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E~275}\label{server_8h_a17c3799a7d49eb9ecfa64b003c0f814b}
+\hypertarget{server_8h_aef490e3308e9471e24f7759a5b491fd2}{}\index{server.\+h@{server.\+h}!Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E@{Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}}
+\index{Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E@{Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}!server.\+h@{server.\+h}}
+\subsubsection[{Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\+P\+L\+A\+T\+E\+F\+O\+R\+M\+E~330}\label{server_8h_aef490e3308e9471e24f7759a5b491fd2}
+
+
+\subsection{Function Documentation}
+\hypertarget{server_8h_af960448502472b0f07a4f7086a8370c8}{}\index{server.\+h@{server.\+h}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!server.\+h@{server.\+h}}
+\subsubsection[{recevoir(void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ recevoir (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{server_8h_af960448502472b0f07a4f7086a8370c8}
+\hypertarget{server_8h_a90b51ab1ce4995bd2e484329a0aa565e}{}\index{server.\+h@{server.\+h}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!server.\+h@{server.\+h}}
+\subsubsection[{send\+Message(int sock, char message[])}]{\setlength{\rightskip}{0pt plus 5cm}int send\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{sock, }
+\item[{char}]{message\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{server_8h_a90b51ab1ce4995bd2e484329a0aa565e}
+\hypertarget{server_8h_ae9eeab47ed576f565aeb2b29d2ed2128}{}\index{server.\+h@{server.\+h}!serialize@{serialize}}
+\index{serialize@{serialize}!server.\+h@{server.\+h}}
+\subsubsection[{serialize(\+S\+D\+L\+\_\+\+Rect pos, char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}void serialize (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Rect}]{pos, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{server_8h_ae9eeab47ed576f565aeb2b29d2ed2128}
+\hypertarget{server_8h_a8bac22586f6de4e8fab98d2537afa536}{}\index{server.\+h@{server.\+h}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!server.\+h@{server.\+h}}
+\subsubsection[{unserialize(const char str[])}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect unserialize (
+\begin{DoxyParamCaption}
+\item[{const char}]{str\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{server_8h_a8bac22586f6de4e8fab98d2537afa536}

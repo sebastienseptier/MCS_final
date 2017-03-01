@@ -1,0 +1,187 @@
+\hypertarget{server__co_8c}{}\section{server\+\_\+co.\+c File Reference}
+\label{server__co_8c}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+{\ttfamily \#include \char`\"{}server.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server__co_8c_a90b51ab1ce4995bd2e484329a0aa565e}{send\+Message} (int sock, char message\mbox{[}$\,$\mbox{]})
+\item 
+void $\ast$ \hyperlink{server__co_8c_ab9aa8750057b7274a90cea0ddc61a5ea}{time\+Action} ()
+\item 
+void $\ast$ \hyperlink{server__co_8c_af960448502472b0f07a4f7086a8370c8}{recevoir} (void $\ast$arg)
+\item 
+void \hyperlink{server__co_8c_ae9eeab47ed576f565aeb2b29d2ed2128}{serialize} (S\+D\+L\+\_\+\+Rect pos, char $\ast$str)
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a4b550174bc8deb735108fd9db99f299a}{unserialize} (const char $\ast$str)
+\item 
+int \hyperlink{server__co_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server__co_8c_adeadf7cb6916a10c7142ce7d265ab32a}{socket\+\_\+desc}
+\item 
+int \hyperlink{server__co_8c_a5dd88094eb66b604d6ce5963836bd0d9}{chute\+Mario}
+\item 
+int \hyperlink{server__co_8c_a6bf7a2059a43214f2838f16eee1535be}{chute\+Luigi}
+\item 
+int \hyperlink{server__co_8c_ab6bacf2b08c6c9241a93b2f07ebac8dc}{client\+\_\+sock} \mbox{[}\hyperlink{server_8h_a24ce742f100f6686e21181eeef146c52}{N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}\mbox{]}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_af565adbea3288edf19ecb8438be8777d}{pos\+Mario}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}{pos\+Luigi}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a341583ea9e65fbd19fddaed3645ab70b}{pos\+Mario\+Fireball}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{server__co_8c_a88b79b425d22b397d42fb25485c76c58}{pos\+Luigi\+Fireball}
+\item 
+int \hyperlink{server__co_8c_aedaf2f3149eefed5d78d82392b099586}{nb\+Client}
+\item 
+int \hyperlink{server__co_8c_abd66144c89e8b05800277c00383b930d}{saut\+Mario}
+\item 
+int \hyperlink{server__co_8c_aa76b9938bb39a1f3f2cd17340bdb6403}{saut\+Luigi}
+\item 
+int \hyperlink{server__co_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}{tir\+Mario}
+\item 
+int \hyperlink{server__co_8c_a9c18f160f6dd693a3084ea0dd42cc836}{tir\+Luigi}
+\item 
+unsigned int \hyperlink{server__co_8c_a1e37c2464f0f82e02edfd7310cd655c0}{temps\+Debut\+Saut\+Mario}
+\item 
+unsigned int \hyperlink{server__co_8c_a4b9bb070bfc0eb7fe98100c3012c860a}{temps\+Debut\+Saut\+Luigi}
+\item 
+unsigned int \hyperlink{server__co_8c_aec1d509dde0769c5112528b607c2d604}{temps\+Debut\+Tir\+Mario}
+\item 
+unsigned int \hyperlink{server__co_8c_a13ffeea2b62cb7e6790ee09abf5e9e5e}{temps\+Debut\+Tir\+Luigi}
+\item 
+int \hyperlink{server__co_8c_a84eb0d589e7314ad3d6447b9113fb78d}{orientation\+\_\+mario\+Fireball}
+\item 
+int \hyperlink{server__co_8c_a6689209ae74d5010b67be07bec37eb4d}{orientation\+\_\+luigi\+Fireball}
+\item 
+int \hyperlink{server__co_8c_a379cab3c55a4171cc17daf7936a84f0b}{orientation\+\_\+mario}
+\item 
+int \hyperlink{server__co_8c_a20f9225591d20b1fdd2b4915ccfca102}{orientation\+\_\+luigi}
+\item 
+int \hyperlink{server__co_8c_a95855e3850cd2939097756cb50c76e8d}{dep\+Mario}
+\item 
+int \hyperlink{server__co_8c_acab6f7444a1202b08b4963add365025d}{dep\+Luigi}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{server__co_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!main@{main}}
+\index{main@{main}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_a0ddf1224851353fc92bfbff6f499fa97}
+\hypertarget{server__co_8c_af960448502472b0f07a4f7086a8370c8}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{recevoir(void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ recevoir (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_af960448502472b0f07a4f7086a8370c8}
+\hypertarget{server__co_8c_a90b51ab1ce4995bd2e484329a0aa565e}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{send\+Message(int sock, char message[])}]{\setlength{\rightskip}{0pt plus 5cm}int send\+Message (
+\begin{DoxyParamCaption}
+\item[{int}]{sock, }
+\item[{char}]{message\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_a90b51ab1ce4995bd2e484329a0aa565e}
+\hypertarget{server__co_8c_ae9eeab47ed576f565aeb2b29d2ed2128}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!serialize@{serialize}}
+\index{serialize@{serialize}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{serialize(\+S\+D\+L\+\_\+\+Rect pos, char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}void serialize (
+\begin{DoxyParamCaption}
+\item[{S\+D\+L\+\_\+\+Rect}]{pos, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_ae9eeab47ed576f565aeb2b29d2ed2128}
+\hypertarget{server__co_8c_ab9aa8750057b7274a90cea0ddc61a5ea}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!time\+Action@{time\+Action}}
+\index{time\+Action@{time\+Action}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{time\+Action()}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ time\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_ab9aa8750057b7274a90cea0ddc61a5ea}
+\hypertarget{server__co_8c_a4b550174bc8deb735108fd9db99f299a}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!unserialize@{unserialize}}
+\index{unserialize@{unserialize}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{unserialize(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect unserialize (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{server__co_8c_a4b550174bc8deb735108fd9db99f299a}
+
+
+\subsection{Variable Documentation}
+\hypertarget{server__co_8c_a6bf7a2059a43214f2838f16eee1535be}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!chute\+Luigi@{chute\+Luigi}}
+\index{chute\+Luigi@{chute\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{chute\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}int chute\+Luigi}\label{server__co_8c_a6bf7a2059a43214f2838f16eee1535be}
+\hypertarget{server__co_8c_a5dd88094eb66b604d6ce5963836bd0d9}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!chute\+Mario@{chute\+Mario}}
+\index{chute\+Mario@{chute\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{chute\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}int chute\+Mario}\label{server__co_8c_a5dd88094eb66b604d6ce5963836bd0d9}
+\hypertarget{server__co_8c_ab6bacf2b08c6c9241a93b2f07ebac8dc}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!client\+\_\+sock@{client\+\_\+sock}}
+\index{client\+\_\+sock@{client\+\_\+sock}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{client\+\_\+sock}]{\setlength{\rightskip}{0pt plus 5cm}int client\+\_\+sock\mbox{[}{\bf N\+B\+M\+A\+X\+C\+L\+I\+E\+N\+T\+S}\mbox{]}}\label{server__co_8c_ab6bacf2b08c6c9241a93b2f07ebac8dc}
+\hypertarget{server__co_8c_acab6f7444a1202b08b4963add365025d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!dep\+Luigi@{dep\+Luigi}}
+\index{dep\+Luigi@{dep\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{dep\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}int dep\+Luigi}\label{server__co_8c_acab6f7444a1202b08b4963add365025d}
+\hypertarget{server__co_8c_a95855e3850cd2939097756cb50c76e8d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!dep\+Mario@{dep\+Mario}}
+\index{dep\+Mario@{dep\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{dep\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}int dep\+Mario}\label{server__co_8c_a95855e3850cd2939097756cb50c76e8d}
+\hypertarget{server__co_8c_aedaf2f3149eefed5d78d82392b099586}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!nb\+Client@{nb\+Client}}
+\index{nb\+Client@{nb\+Client}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{nb\+Client}]{\setlength{\rightskip}{0pt plus 5cm}int nb\+Client}\label{server__co_8c_aedaf2f3149eefed5d78d82392b099586}
+\hypertarget{server__co_8c_a20f9225591d20b1fdd2b4915ccfca102}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!orientation\+\_\+luigi@{orientation\+\_\+luigi}}
+\index{orientation\+\_\+luigi@{orientation\+\_\+luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{orientation\+\_\+luigi}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+luigi}\label{server__co_8c_a20f9225591d20b1fdd2b4915ccfca102}
+\hypertarget{server__co_8c_a6689209ae74d5010b67be07bec37eb4d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!orientation\+\_\+luigi\+Fireball@{orientation\+\_\+luigi\+Fireball}}
+\index{orientation\+\_\+luigi\+Fireball@{orientation\+\_\+luigi\+Fireball}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{orientation\+\_\+luigi\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+luigi\+Fireball}\label{server__co_8c_a6689209ae74d5010b67be07bec37eb4d}
+\hypertarget{server__co_8c_a379cab3c55a4171cc17daf7936a84f0b}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!orientation\+\_\+mario@{orientation\+\_\+mario}}
+\index{orientation\+\_\+mario@{orientation\+\_\+mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{orientation\+\_\+mario}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+mario}\label{server__co_8c_a379cab3c55a4171cc17daf7936a84f0b}
+\hypertarget{server__co_8c_a84eb0d589e7314ad3d6447b9113fb78d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!orientation\+\_\+mario\+Fireball@{orientation\+\_\+mario\+Fireball}}
+\index{orientation\+\_\+mario\+Fireball@{orientation\+\_\+mario\+Fireball}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{orientation\+\_\+mario\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}int orientation\+\_\+mario\+Fireball}\label{server__co_8c_a84eb0d589e7314ad3d6447b9113fb78d}
+\hypertarget{server__co_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!pos\+Luigi@{pos\+Luigi}}
+\index{pos\+Luigi@{pos\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{pos\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Luigi}\label{server__co_8c_a7de1c3eaff2d227241ab0bbc9ef353b5}
+\hypertarget{server__co_8c_a88b79b425d22b397d42fb25485c76c58}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!pos\+Luigi\+Fireball@{pos\+Luigi\+Fireball}}
+\index{pos\+Luigi\+Fireball@{pos\+Luigi\+Fireball}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{pos\+Luigi\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Luigi\+Fireball}\label{server__co_8c_a88b79b425d22b397d42fb25485c76c58}
+\hypertarget{server__co_8c_af565adbea3288edf19ecb8438be8777d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!pos\+Mario@{pos\+Mario}}
+\index{pos\+Mario@{pos\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{pos\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Mario}\label{server__co_8c_af565adbea3288edf19ecb8438be8777d}
+\hypertarget{server__co_8c_a341583ea9e65fbd19fddaed3645ab70b}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!pos\+Mario\+Fireball@{pos\+Mario\+Fireball}}
+\index{pos\+Mario\+Fireball@{pos\+Mario\+Fireball}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{pos\+Mario\+Fireball}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Rect pos\+Mario\+Fireball}\label{server__co_8c_a341583ea9e65fbd19fddaed3645ab70b}
+\hypertarget{server__co_8c_aa76b9938bb39a1f3f2cd17340bdb6403}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!saut\+Luigi@{saut\+Luigi}}
+\index{saut\+Luigi@{saut\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{saut\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}int saut\+Luigi}\label{server__co_8c_aa76b9938bb39a1f3f2cd17340bdb6403}
+\hypertarget{server__co_8c_abd66144c89e8b05800277c00383b930d}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!saut\+Mario@{saut\+Mario}}
+\index{saut\+Mario@{saut\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{saut\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}int saut\+Mario}\label{server__co_8c_abd66144c89e8b05800277c00383b930d}
+\hypertarget{server__co_8c_adeadf7cb6916a10c7142ce7d265ab32a}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!socket\+\_\+desc@{socket\+\_\+desc}}
+\index{socket\+\_\+desc@{socket\+\_\+desc}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{socket\+\_\+desc}]{\setlength{\rightskip}{0pt plus 5cm}int socket\+\_\+desc}\label{server__co_8c_adeadf7cb6916a10c7142ce7d265ab32a}
+\hypertarget{server__co_8c_a4b9bb070bfc0eb7fe98100c3012c860a}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!temps\+Debut\+Saut\+Luigi@{temps\+Debut\+Saut\+Luigi}}
+\index{temps\+Debut\+Saut\+Luigi@{temps\+Debut\+Saut\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{temps\+Debut\+Saut\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int temps\+Debut\+Saut\+Luigi}\label{server__co_8c_a4b9bb070bfc0eb7fe98100c3012c860a}
+\hypertarget{server__co_8c_a1e37c2464f0f82e02edfd7310cd655c0}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!temps\+Debut\+Saut\+Mario@{temps\+Debut\+Saut\+Mario}}
+\index{temps\+Debut\+Saut\+Mario@{temps\+Debut\+Saut\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{temps\+Debut\+Saut\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int temps\+Debut\+Saut\+Mario}\label{server__co_8c_a1e37c2464f0f82e02edfd7310cd655c0}
+\hypertarget{server__co_8c_a13ffeea2b62cb7e6790ee09abf5e9e5e}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!temps\+Debut\+Tir\+Luigi@{temps\+Debut\+Tir\+Luigi}}
+\index{temps\+Debut\+Tir\+Luigi@{temps\+Debut\+Tir\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{temps\+Debut\+Tir\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int temps\+Debut\+Tir\+Luigi}\label{server__co_8c_a13ffeea2b62cb7e6790ee09abf5e9e5e}
+\hypertarget{server__co_8c_aec1d509dde0769c5112528b607c2d604}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!temps\+Debut\+Tir\+Mario@{temps\+Debut\+Tir\+Mario}}
+\index{temps\+Debut\+Tir\+Mario@{temps\+Debut\+Tir\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{temps\+Debut\+Tir\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int temps\+Debut\+Tir\+Mario}\label{server__co_8c_aec1d509dde0769c5112528b607c2d604}
+\hypertarget{server__co_8c_a9c18f160f6dd693a3084ea0dd42cc836}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!tir\+Luigi@{tir\+Luigi}}
+\index{tir\+Luigi@{tir\+Luigi}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{tir\+Luigi}]{\setlength{\rightskip}{0pt plus 5cm}int tir\+Luigi}\label{server__co_8c_a9c18f160f6dd693a3084ea0dd42cc836}
+\hypertarget{server__co_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}{}\index{server\+\_\+co.\+c@{server\+\_\+co.\+c}!tir\+Mario@{tir\+Mario}}
+\index{tir\+Mario@{tir\+Mario}!server\+\_\+co.\+c@{server\+\_\+co.\+c}}
+\subsubsection[{tir\+Mario}]{\setlength{\rightskip}{0pt plus 5cm}int tir\+Mario}\label{server__co_8c_a6702bc7c1cb8c8a31d59e55e5c9928f0}
